@@ -1,0 +1,18 @@
+[workspace]
+members = [".", "crates/crate1", "crates/crate2"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+
+[workspace.dependencies]
+crate1 = { path = "crates/crate1" }
+
+[package]
+name = "rs-test"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+serde = { version = "1.0", optional = true }
+crate1.workspace = true

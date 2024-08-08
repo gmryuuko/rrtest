@@ -1,0 +1,10 @@
+[package]
+name = "crate1"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+serde = { version = "1.0", optional = true }
+
+[features]
+serde1 = ["dep:serde"]
